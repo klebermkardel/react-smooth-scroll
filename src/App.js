@@ -34,6 +34,14 @@ function App() {
           ))}
         </ul>
       </header>
+
+      <main>
+        {menuItems.map(menu => (
+          <div className='content'>
+            <h1 className='content-header' id={menu.title}>{menu.title}</h1>
+          </div>
+        ))}
+      </main>
     </div>
   );
 }
