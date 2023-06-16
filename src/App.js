@@ -1,44 +1,55 @@
-import './App.css';
+import "./App.css";
+import { Link } from "react-scroll";
 
 function App() {
-
   const menuItems = [
     {
       id: 1,
-      title: "home"
+      title: "home",
     },
     {
       id: 2,
-      title: "sobre"
+      title: "portfolio",
     },
     {
       id: 3,
-      title: "portfolio"
+      title: "contact",
     },
     {
       id: 4,
-      title: "contato"
-    }
-  ]
+      title: "about",
+    },
+  ];
 
   return (
     <div className="App">
       <header>
         <nav>
-          <h2>Meu Projeto</h2>
+          <h2>Coffee Shop</h2>
 
           <ul>
-          {menuItems.map(menu => (
-            <li><a href={`#${menu.title}`}>{menu.title}</a></li>
-          ))}
-        </ul>
+            {menuItems.map((menu) => (
+              <li>
+                <Link
+                  to={menu.title}
+                  smooth={true}
+                  offset={-430}
+                  duration={500}
+                >
+                  {menu.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
       </header>
 
       <main>
-        {menuItems.map(menu => (
-          <div className='content'>
-            <h1 className='content-header' id={menu.title}>{menu.title}</h1>
+        {menuItems.map((menu) => (
+          <div className="content">
+            <h1 className="content-header" id={menu.title}>
+              {menu.title}
+            </h1>
           </div>
         ))}
       </main>
