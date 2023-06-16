@@ -5,19 +5,19 @@ function App() {
   const menuItems = [
     {
       id: 1,
-      title: "Home"
+      title: "home"
     },
     {
       id: 2,
-      title: "Sobre"
+      title: "sobre"
     },
     {
       id: 3,
-      title: "Portfolio"
+      title: "portfolio"
     },
     {
       id: 4,
-      title: "Contato"
+      title: "contato"
     }
   ]
 
@@ -26,13 +26,13 @@ function App() {
       <header>
         <nav>
           <h2>Meu Projeto</h2>
-        </nav>
 
-        <ul>
+          <ul>
           {menuItems.map(menu => (
             <li><a href={`#${menu.title}`}>{menu.title}</a></li>
           ))}
         </ul>
+        </nav>
       </header>
 
       <main>
